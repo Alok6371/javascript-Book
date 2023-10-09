@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onMOuseOver Example </title>
+</head>
+<body>
+
+    <!-- ////////////first Type////////////////// -->
+
+    <div id="myDiv" onmouseover="onmouseoverfunction()" style="height: 200px; width: 200px; background-color: red; color: white; cursor:progress ;">Inter the mouse inside the Div</div>
+    <script>
+        function onmouseoverfunction(){
+            console.log("The mouse are Over in the Div");
+            alert("Mouse are Over the Div");
+        }
+    </script>
+
+    <!-- ////////////////Second Type//////////////// -->
+    <div id="myDiv2" style="height: 200px; width: 200px; background-color: purple; cursor: crosshair; color: white;">Inter the mouse inside the Div</div>
+
+    <script>
+        var divElement=document.getElementById("myDiv2");
+        divElement.addEventListener("mouseover",function(){
+            alert("Mouse  is over in the Div!")
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onmousedown Example</title>
+</head>
+<body>
+
+<!-- /////////////////first step////////////// -->
+
+<!-- <button id="myButton" onmousedown="mouseDownFunction()">Click me</button>
+
+<script>
+function mouseDownFunction() {
+    alert("Mouse button pressed down!");
+}
+</script> -->
+
+<!-- ///////////////second type/////////////// -->
+
+<button id="myButton">Click me</button>
+<script>
+    var buttonElement=document.getElementById("myButton");
+    buttonElement.addEventListener("mousedown",function(){
+        alert("Mouse button are Pressed");
+    })
+</script>
+
+</body>
+</html>

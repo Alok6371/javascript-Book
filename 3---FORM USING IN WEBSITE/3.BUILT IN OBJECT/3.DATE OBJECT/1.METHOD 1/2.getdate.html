@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getDate() method</title>
+</head>
+
+<body>
+    <p>the getdate() method retuen the of the month (1 to 31) of a date.</p>
+    <p id="getdate"></p>
+    <script>
+        const d=new Date ("may 5,2004 01:13:50");
+        // const d=new Date();
+        let day=d.getDate();
+        document.getElementById("getdate").innerHTML=day;
+
+    </script>
+</body>
+
+</html>

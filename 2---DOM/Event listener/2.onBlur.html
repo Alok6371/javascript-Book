@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <title>OnBlur Event example</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            background: blue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h12" style="font-size: 29px;">onBlur event Example</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="data" onblur="validate()" placeholder="Enter the data">
+    <div id="div">
+        Click me
+    </div>
+
+
+    <script>
+        function validate() {
+            var inputty = document.getElementById("data");
+            var divinput = document.getElementById("div");
+
+            console.log(inputty)
+
+            var a = inputty.value;
+            if (inputty.value === "") {
+                divinput.textContent = "There are no value";
+                inputty.style.borderColor = "red"
+
+            }
+            else {
+                document.getElementById("div").innerHTML = "you write is " +a ;
+                inputty.style.borderColor = "green";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

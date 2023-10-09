@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onDblClick Event listener</title>
+</head>
+<body>
+    <h1>onDblClick  Event Example</h1>
+    <button id="button" onDblclick="showmessage()">Click me 2 times</button>
+    <p id="message"></p>
+
+    <script>
+        function showmessage(){
+            document.getElementById("message").textContent="You Clicked me 2 times.";
+        }
+    </script>
+</body>
+</html>

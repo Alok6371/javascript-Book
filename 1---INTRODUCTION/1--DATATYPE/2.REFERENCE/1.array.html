@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> viewing array element in java script  </title>
+</head>
+<body>
+    <script lang="javascript">
+        // var arr=[1,2,3, "alok"," (7) is string"]
+        // document.write(arr[1] + arr[2]+"=(2+3)"+ arr[4] )
+
+
+        friends=new Array(5);
+        friends[0]="alok";
+        friends[1]="asish";
+        friends[2]="tapan";
+        friends[3]="pruthibi";
+        friends[4]="nilu";
+        // document.write(friends[0]+"<br>")
+        // document.write(friends[1]+"<br>")
+        // document.write(friends[2]+"<br>")
+        // document.write(friends[3]+"<br>")
+        // document.write(friends[4]+"<br>")
+        join_party=friends.join()
+        join_party2=friends.reverse()
+
+        document.write(friends.length + "<br>")
+        document.write(join_party + "<br>")
+        document.write(join_party2)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Forms</title>The code is allows to access the form objects Elements Array -->
+    <script lang="javaScript">
+    
+        function Chk(f1) {
+            f1.Check.checked = true;
+            alert("THe CheckBox just get Checked");
+            f1.Check.checked = false;
+            f1.Radio[0].checked = true;
+            f1.Radio[1].checked = false;
+            alert("The Radio button Just got Checked");
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Client Name : <input type="Text" name="Text"><br><br>
+
+        Client Address : <input type="Text" name="Text1"><br><br>
+
+        <input type="radio" name="Radio">Male
+        <input type="radio" name="Radio">Female <br><br>
+
+        <input type="checkbox" name="Check">Employed <br><br>
+
+        <input type="Button" name="Bt" onClick="Chk(this.form)" value="Set the Element Array value">
+
+    </form>
+
+</body>
+
+</html>

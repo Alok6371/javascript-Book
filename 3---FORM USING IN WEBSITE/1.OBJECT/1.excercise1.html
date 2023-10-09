@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms </title>
+    <script lang="javaScript">
+        function ver(form1) {
+            v = form1.elements.length;
+            // console.log(v)
+            if (form1.elements[3].name == "button1");
+            {
+                alert('First form name :' + document.forms[0].name);
+                alert('No of form elements of ' + document.forms[0].name + " =" + v);
+                
+            }
+
+            if (form1.elements[4].name == "button2"); {
+                alert('Second form:' + document.forms[1].name);
+                alert('No. of forms elements of ' + document.forms[1].name + "=" + v);
+            }
+            for (i = 0; i < v; i++)
+                alert(form1.elements[i].name + " is at position " + i)
+        }
+    </script>
+</head>
+
+<body>
+    <form name="Survey Form 1">
+        First Form: <i><b>Survey Form 1</b></i><br> <br>
+        First Name: <input type="text" name="Text1" placeholder="Enter your name"> <br><br>
+        <input type="radio" name="Radio1">Fresher
+        <input type="radio" name="Radio2">Experienced <br><br>
+        <input type="button" name="button1" onclick="ver(form)" value="Click1">
+    </form>
+    <form name="Survey Form 2">
+        Second Form: <i><b>Survey Form 2</b></i><br> <br>
+        Name: <input type="text" name="Text2" placeholder="Enter your name"> <br><br>
+        Password: <input type="password" name="Pass2" placeholder="Enter your Password"> <br><br>
+        <input type="checkbox" name="Check1" value="">Employed
+        <input type="checkbox" name="Check2" value="">Non-Employed
+        <input type="radio" name="radio3" value="alok">Alok pradhan
+        <br><br>
+        <input type="button" name="button2" onclick="ver(form)" value="Click2">
+    </form>
+</body>
+
+</html>

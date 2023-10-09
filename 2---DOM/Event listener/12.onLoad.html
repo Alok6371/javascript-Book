@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>onload Example</title>
+</head>
+
+<body>
+
+    <img src="89.jpg" id="myImage" alt="Example Image">
+
+    <script>
+        // Get a reference to the image element
+        var imageElement = document.getElementById("myImage");
+
+
+        // Attach the onload event handler to the image element
+        imageElement.onload = imageLoaded();
+
+        // This function will be called when the image is fully loaded
+
+        function imageLoaded() {
+            alert("Image has finished loading!");
+        }
+    </script>
+</body>
+
+</html>

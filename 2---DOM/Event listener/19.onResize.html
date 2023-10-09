@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onResize Example</title>
+</head>
+
+<body>
+    <div id="resizeInfo" style="background-color: green;">Window Dimensions</div>
+    <script>
+        function updateWindowSize() {
+            var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            
+            var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+            var resizeInfo = document.getElementById("resizeInfo");
+            
+            resizeInfo.textContent = "window dimensions: Width " + width + ",Height=" + height;
+        }
+        window.onresize = updateWindowSize;
+        updateWindowSize();
+    </script>
+</body>
+
+</html>

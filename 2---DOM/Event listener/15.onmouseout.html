@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseout event Example</title>
+</head>
+
+<body>
+
+    <!-- /////////First type///////////// -->
+
+    <div id="myDiv" onmouseout="mouseOutfunction()"
+        style="width: 200px; height: 200px; background-color: red; color: white;">the mouse outof the div check how many
+    </div>
+
+    <script>
+        function mouseOutfunction(event) {
+            alert("Mouse are moved to out!")
+        }
+    </script>
+
+    <!-- //////////////Second Type//////////////// -->
+    <!-- <div id="myDiv2" style="height: 200px; width: 200px; background-color: green; color: white;"> Move out the cursor
+    </div>
+
+    <script>
+        var divElement = document.getElementById("myDiv2");
+        divElement.addEventListener("mouseout", function () {
+            alert("The mouse are moved out!")
+        })
+    </script> -->
+</body>
+
+</html>

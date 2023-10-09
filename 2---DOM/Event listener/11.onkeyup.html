@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>onkeyup Example</title>
+</head>
+
+<body>
+
+    <!-- ///////////////////////first type/////////// -->
+
+    <!-- <input type="text"  id="myInput" onkeyup="Keyuppressfunction()" placeholder="Press and relase  a key">
+<script>
+    function Keyuppressfunction(){
+        alert("A key was realsed")
+    }
+</script> -->
+
+    <!-- ///////////////////second Type/////////////// -->
+    <input type="text" name="" id="myinput" placeholder="Press and relase a key">
+    <script>
+        var inputElement = document.getElementById("myinput");
+        inputElement.addEventListener("keyup", function (event) {
+            alert("A key was relased : " +event.key);
+        })
+    </script>
+
+</body>
+
+</html>

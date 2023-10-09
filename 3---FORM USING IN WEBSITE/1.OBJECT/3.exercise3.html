@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-3</title>
+    <script>
+        function verifyData() {
+            a = 0;
+            r = "";
+            for (i = 0; i <= 4; i++) {
+                if (document.forms[0].elements[i].value == "") {
+                    a = 1;
+                    r = r + " " + document.forms[0].elements[i].name + ";";
+                    //console.log(document.forms[0].elements[i].name);
+                    //console.log( " i value is: "+i+r)
+                }
+                else if ((i > 3) && (a == 0)) {
+                    alert("All TextBoxes  are filled in - Thank You  !");
+                }
+            }
+            for (i = 0; i <= 4; i++) {
+                if (document.forms[0].elements[i].value == "") {
+                    alert("Please Fiell The Following TextBox /Textboxes :-"+ r);
+                    //console.log( " i value is: "+i+r);
+
+                    document.forms[0].elements[i].focus();
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        First Name: <input type="text" name="Firstname" size="20">
+        <br>
+        <br>
+        Last Name: <input type="text" name="Lastname" size="20">
+        <p>
+            Address: <input type="text" name="Address" size="30">
+        <p>
+            Pincode: <input type="text" name="Pincode" size="6">
+            <br><br>
+            <input type="button" name="act" onclick="verifyData()" value="Verify">
+            <script lang="javaScript">
+                document.forms[0].Firstname.focus();
+
+            </script>
+    </form>
+</body>
+
+</html>

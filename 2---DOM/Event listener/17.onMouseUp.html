@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>onmouseup Example</title>
+</head>
+
+<body>
+
+    <!-- //////////first type/////////////// -->
+
+    <div id="myDiv" onmouseup="mouseUpFunction()" style="width: 200px; height: 200px; background-color: lightblue;">
+        Click and hold, then release the mouse button.
+    </div>
+
+    <script>
+        function mouseUpFunction() {
+            alert("Mouse button released!");
+        }
+    </script>
+
+    <!-- ////////////////Second Type////////////// -->
+
+    <div id="myDiv2" style="width:200px;height:200px;background-color:pink">Click and hold ,then release the mouse button</div>
+    <script>
+        var divElement=document.getElementById("myDiv2");
+        divElement.addEventListener("mouseup",function(){
+            alert("Mouse button are released!");
+        })
+    </script>
+
+</body>
+
+</html>

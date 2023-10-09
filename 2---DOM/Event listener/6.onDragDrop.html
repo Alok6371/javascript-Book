@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ondrag and ondrop Event Example</title>
+    <style>
+        .dropzone {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            /* padding: 10px; */
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+            /* for image */
+            /* object-fit: cover; */
+            overflow-y: hidden;
+
+
+        }
+
+        .dragged {
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
+        #drag-image {
+            width: 200px;
+            height: 200px;
+            /* margin: 0;
+            padding: 0; */
+        }
+    </style>
+</head>
+
+<body >
+    <h1>ondrag and ondrop Event Example</h1>
+
+    <div class="dropzone" id="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+        Drag Here
+
+    </div>
+
+    <p>Drag this text into the dropzone:</p>
+    <!-- <p id="draggable" draggable="true" ondragstart="drag(event)">Drag me </p> -->
+    <p ></p>
+
+
+
+    <img src="89.jpg" id="drag-image" class="image" draggable="true" ondragstart="drag(event)">
+    <script>
+        // Function to handle the drag event
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+            event.target.classList.add("dragged");
+        }
+
+        // Function to allow the drop event
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        // Function to handle the drop event
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            var dropzone = event.target;
+
+            // Append the dragged element to the dropzone
+            dropzone.appendChild(document.getElementById(data));
+            
+
+            // check if the dropped item is in image
+            // if (document.getElementById(data).tagName === "image") {
+            //     dropzone.appendChild(document.getElementById(data));
+            //     document.getElementById(data).classList.add("image");
+            //     dropzone.appendChild(document.getElementById("non"))
+            // }
+
+            // Remove the "dragged" class from the dragged element
+            // document.getElementById(data).classList.remove("dragged");
+
+    
+        }
+    </script>
+</body>
+
+</html>

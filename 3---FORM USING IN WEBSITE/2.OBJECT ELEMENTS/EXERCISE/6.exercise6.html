@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-6</title>
+    <script>
+        //  var valuee = 100
+        // console.log(Math.sqrt(valuee))
+        // as per easy th emethods
+
+        function calculate(form, callingField) 
+        {
+            console.log(callingField)
+            if (callingField == "result") {
+                if (form.square.checked) {
+                    form.entry.value = Math.sqrt(form.result.value);
+                    console.log(form.entry.value)
+
+                }
+                else {
+                    form.entry.value = form.result.value / 2;
+                    console.log(form.entry.value)
+
+                }
+            }
+            else {
+                if (form.square.checked) {
+                    form.result.value = form.entry.value * form.entry.value;
+                    // console.log(form.entry.value)
+                    // console.log(form.result.value)
+                }
+                else {
+                    form.result.value = form.entry.value * 2;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <center>
+            <b>Value:</b>
+            <input type="text" name="entry" onchange="calculate(this.form,this.name)" value="" placeholder="0">
+
+            <br><br>
+            <b>Action(Default:double)</b>
+            <input type="checkbox" name="square" onclick="calculate(this.form,this.name)">square
+            <br><br>
+
+            <b>Result</b>
+            <input type="text" onchange="calculate(this.form,this.name)" name="result" value="" placeholder="0">
+        </center>
+    </form>
+</body>
+
+</html>

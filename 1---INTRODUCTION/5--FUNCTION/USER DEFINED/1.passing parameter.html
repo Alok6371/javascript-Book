@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passing Parameter</title>
+    <script lang="javascript">
+        var name="";
+        // document.write(name.length) //check the length of name variable 
+        function hello(){
+            name=prompt('Enter Your name:',name);
+            alert("Greeting " + name +" Welcome to the page");
+        }
+        function goodbye(){
+            alert("Good Bye" + name +"Sorry to see you go!")
+        }
+    </script>
+</head>
+<body onload="hello()" onUnload="goodbye()">
+    <img src="Anjali Arora.jpg"  height="100px">
+
+    
+</body>
+</html>

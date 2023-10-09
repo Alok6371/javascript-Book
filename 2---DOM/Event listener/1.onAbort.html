@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>onAbort Event listener</title>
+</head>
+
+<body>
+    <h1>Image Loading Example</h1>
+    <img src="89.jpg" id="myImage" onabort="handleImageAbort()" alt="Sample Image">
+    <p>Click the button to abort the image loading:</p>
+    <button onclick="abortImageLoading()">Abort Image Loading</button>
+    <script>
+        var a=20;
+        function handleImageAbort() {
+            alert("Image loading was Aborted!");
+
+        }
+        function abortImageLoading() {
+            alert("Image loading was Aborted.");
+            console.log(a)
+            var imageElement = document.getElementById("myImage");
+            imageElement.src = "99.jpg";
+        }
+    </script>
+</body>
+
+</html>

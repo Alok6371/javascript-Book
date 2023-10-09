@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onMousemove Event Example </title>
+</head>
+
+<body>
+
+    <!-- //////////////////////first step////////////// -->
+
+    <div id="myDiv" style="width: 200px; height: 200px; background-color: black; color: white; cursor: pointer;">Move
+        the cursor and get the coordinates</div>
+
+    <script>
+        var divElement = document.getElementById("myDiv");
+        divElement.addEventListener("mousemove", function (event) {
+            console.log("the value of X=" + event.clientX + ",  Y=" + event.clientY);
+        })
+    </script>
+
+    <!-- //////////////second type/////////////////// -->
+    <div id="myDiv" onmousemove="mymousemovefunction()" style="height:200px; width: 200px; background-color: red; color: white;"> Move the cursor and get the coordinates</div>
+
+    <script>
+        function mymousemovefunction(){
+            console.log("mouse are moved");
+        }
+    </script>
+
+</body>
+
+</html>

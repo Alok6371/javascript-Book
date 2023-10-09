@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>beforeunload Example</title>
+</head>
+<body>
+
+<p>Click the "Close Window" button or navigate away from this page.</p>
+
+<script>
+window.addEventListener("beforeunload", function(event) {
+    // Display a confirmation message
+    event.preventDefault();
+    event.returnValue = "Are you sure you want to leave this page?";
+});
+</script>
+
+</body>
+</html>

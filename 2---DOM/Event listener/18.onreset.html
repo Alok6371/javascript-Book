@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onReset Example</title>
+</head>
+
+<body>
+
+    <!-- /////////////////First Type//////////////// -->
+
+    <!-- <form id="myForm" onreset="formRestFunction()">
+
+        <label for="name:">Name:</label>
+        <input type="text" id="name"><br> <br>
+
+        <input type="submit" value="submit">
+        <input type="reset" >
+
+        <script>
+            function formRestFunction() {
+                alert("Form has been reset!")
+            }
+        </script>
+
+    </form> -->
+
+    <!-- //////////////Second type///////////// -->
+    <form id="myForm">
+        <label for="name"> Name:</label>
+        <input type="text" id="name"><br> <br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+
+    </form>
+<script>
+    var divElement=document.getElementById("myForm");
+    divElement.addEventListener("reset",function(){
+        alert("all file are reseted")
+    })
+</script>
+
+</body>
+
+</html>

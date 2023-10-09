@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-8</title>
+    <script>
+        // let myLoveString = "Alok is a good boy boy";
+        // console.log(myLoveString.length)
+        // // console.log(myLoveString.indexOf("boy"))
+        //  var a=myLoveString.indexOf("b")
+        // console.log(a)
+        // console.log(myLoveString.substring(a+0,a+7))
+        // console.log(myLoveString.lastIndexOf("boy"))
+
+        var m;
+        function pick(F1) {
+            var z = " ";
+            for (j = 0; j < 3; j++) {
+                for (i = 0; i < F1.elements[j].length; i++) {
+                    if (F1.elements[j][i].selected) {
+                        var y = F1.elements[j].options[i].value;
+                        z = z + "\n" + y;
+                        F1.elements[3].z;
+                    }
+                }
+            }
+            m = z;
+        }
+        function cal(F1) {
+            var d = 0;
+            for (j = 0; j < 3; j++) {
+                for (i = 0; i < F1.elements[j].length; i++) {
+                    if (F1.elements[j][i].selected) {
+                        var y = F1.elements[j].options[i].value;
+                        s = new String(y);
+                        var a = s.indexOf(">");
+                        var b = s.substring(a + 1, a + 6);
+                        
+                        // substring() is an inbuilt function in JavaScript that is used to return the part of the given string from the start index to the end index. Indexing start from zero (0).
+
+                        c = parseInt(b);
+                        d = d + c;
+                        // console.log(d)
+                    }
+                }
+            }
+            p = "Total Cost of the selected items=" + d;
+            m = m+10 + "\n" + p;
+            F1.elements[3].value = m;
+        }
+        function clr(F1) {
+            F1.elements[3].value = " ";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2>
+        <Center>
+            <div>
+                <font style="color: Blue;">Welcome to the world famous fast Food Center</font>
+            </div>
+            <font style="color: Red;">McDonalds!</font>
+        </Center>
+    </h2>
+    <form name="F1">
+        Select the menu Items of Your Choice:
+        <br><br>
+        <table>
+            <tr valign="top">
+                <td>major dishes: <br>
+                    <select name="s1" multiple onblur="pick(this.form)">
+                        <option value="Burger->80" selected>Burger
+                        <option value="Pizza->40">Pizza
+                        <option value="sandwitch->50">Sandwitch
+                        <option value="veg-curry->70">veg-curry
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    Starters: <br>
+                    <select name="s2" multiple onblur="pick(this.form)">
+                        <option value="Banana seck->100"> Banana Secks
+                        <option value="Apple juice->200"> Apple juice
+                        <option value="French Fries->70">French Fries
+                        <option value="grape juice->70">grape juice
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                    Mom Recipe: <br>
+                    <select name="s3" onblur="pick(this.form)">
+                        <option value="0" hidden>None</option>
+                        <option value="Patoto Curry->10">patoto Curry
+                        <option value="French Fries->70" >French Fries
+                        <option value="tomato bhaja->2000">Tamato Bhaja
+                        <option value="kadali bhaja->2000">kadali bhaja 
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr Valign="top">
+                <td>
+                    <textarea name="TA1" cols="40" rows="10" placeholder="the items are selected by you: " ></textarea>
+                </td>
+                <td></td>
+                <td>
+                    <br>
+                    <input type="button" value="Total Cost " onclick="cal(this.form)" >
+                    <input type="button" value="Clear" onclick="clr(this.form)">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project</title>
+    <style>
+        img {
+            border: 5px solid black;
+            cursor: pointer;
+        }
+
+        h1 {
+            cursor: pointer;
+        }
+    </style>
+    <script lang="javascript">
+        if (document.images) rollever = "yes";
+        else
+            rollever = "no";
+        if (rollever == "yes") {
+            img1on = new Image();
+            img1off = new Image();
+            img1on.src = "anjali red.jpg"
+            img1off.src = "anjali 2.jpg"
+        }
+        function imageSwitchOn(imagename) {
+            if (rollever = "yes") {
+                imageOn = eval(imagename + "on.src");
+                document[imagename].src = imageOn;
+            }
+        }
+        function imageSwitchOff(imagename) {
+            if (rollever = "yes") {
+                imageOff = eval(imagename + "off.src");
+                document[imagename].src = imageOff;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1 id="somechange"></h1>
+
+        <h3><i> place your mouse pointer on the picture </i></h3>
+        <div>
+            <a onmouseover="imageSwitchOn('img1')" onmouseout="imageSwitchOff('img1')"><img src="anjali 2.jpg"
+                    height="200" weight="200" alt="space" name="img1"></a>
+        </div>
+        <form>
+            <input type="text" placeholder="Enter your name" size="40" name="Change" id="input1"
+                value="For change ">
+            <input type="button" onmouseover="Clk()" value="Click to Change" id="clk2" name="Alok">
+        </form>
+    </center>
+    <script>
+        var som = document.getElementById("somechange");
+        som.addEventListener("mouseover", function () {
+            // alert("Hii");
+            som.innerText("Anjali Aora");
+        })
+
+         var cli=document.getElementById("somechange")
+
+        cli.addEventListener("click", function () {
+                cli.innerHTML = "Alok"
+            // console.log(cli.innerHTML)
+        })
+        var clickr = document.getElementById("somechange")
+        var inputelements = document.getElementById("input1");
+        
+        function Clk(){
+            
+            var fty = inputelements.value;
+            clickr.innerHTML =fty;
+        }
+        // console.log(inputelements)
+        // console.log(clickr.innerHTML)
+        // console.log(fty)
+        
+        </script>
+</body>
+
+</html>

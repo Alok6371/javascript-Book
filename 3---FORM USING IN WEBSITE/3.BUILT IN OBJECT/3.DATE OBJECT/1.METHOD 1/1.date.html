@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>dates</title>
+</head>
+
+<body>
+    <p>THe constructor property return the function that created the date prototype</p>
+    <p id="date"></p>
+    <script>
+        const d = new Date();
+        let text = d.constructor;
+        document.getElementById("date").innerHTML = text;
+    </script>
+</body>
+
+</html>

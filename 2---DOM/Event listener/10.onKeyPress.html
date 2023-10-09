@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onKeyPress Example</title>
+</head>
+<body>
+
+    <!-- ///////////////////First Type///////////////// -->
+
+    <!-- <input type="text" id="muinput" onkeypress="keypressfunction()" placeholder="Type a character">
+    <script>
+        function keypressfunction(){
+            alert("A character was typed");
+        }
+    </script> -->
+
+    <!-- ///////////////////Second type//////////////// -->
+    <input type="text" id="myinput" placeholder="Type a character">
+    <script>
+        var inputElement=document.getElementById("myinput");
+
+        inputElement.addEventListener("keypress",function(event){
+            alert("Character Type is : " + event.key);
+        })
+    </script>
+</body>
+</html>

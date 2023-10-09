@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onfocus event Element</title>
+</head>
+
+<body>
+
+        <!-- ///////////////one type/////////////////// -->
+
+    <!-- <input type="text" id="myscript" onfocus="myfunction()" placeholder="Clic me to focus" style="background:purple;color:white; font-size: 40px;">
+
+
+    <script>
+        function myfunction() {
+            document.getElementById("myscript").style.backgroundColor = "red";
+        }
+    </script> -->
+
+
+    <!-- ////////////second type//////////////// -->
+    <input type="text"  id="myInput" placeholder="Click me to focus">
+    <script>
+        var inputElement=document.getElementById("myInput");
+
+        inputElement.addEventListener("focus",function(){
+            inputElement.style.backgroundColor="pink";
+        })
+    </script>
+</body>
+
+</html>

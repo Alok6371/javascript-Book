@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onKeyDown Example</title>
+</head>
+
+<body>
+
+    <!-- ////////////////first type///////////// -->
+
+    <input type="text"  id="myInput" placeholder="Press a key">
+    <script>
+        var inputElement=document.getElementById("myInput");
+        inputElement.addEventListener("keydown",function(event){
+            alert("Key Pressed is : " + event.key);
+        })
+    </script>
+
+    <!-- /////////////////second Type /////////////// -->
+
+    <!-- <input type="text" onkeydown="myfun()" id="myscript" placeholder="Press the key">
+    <script>
+        function myfun() {
+            alert("A key was Pressed")
+        }
+    </script> -->
+</body>
+
+</html>

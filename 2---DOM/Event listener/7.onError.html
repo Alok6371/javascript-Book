@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onerror Event Example</title>
+</head>
+<body>
+    <h1>onerror Event Example</h1>
+    <h2>Change the image source for see the error</h2>
+
+    <img src="89.jpg" onerror="handleImageError()" alt="Sample Image">
+
+    <p id="errorMessage"></p>
+
+    <script>
+        // Function to handle the onerror event for the image
+        function handleImageError() {
+            var errorMessageElement = document.getElementById("errorMessage");
+            errorMessageElement.textContent = "Image failed to load!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onsubmit Event ESubmit</title>
+</head>
+
+
+<body>
+
+    <!-- /////////////////first Type/////////////// -->
+
+    <!-- <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        var formElement = document.getElementById("myForm");
+
+        formElement.addEventListener("submit", function (event) {
+            var nameInput = document.getElementById("name");
+            var name = nameInput.value;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script> -->
+
+    <!-- /////////////////Second Type//////////////// -->
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var nameInput = document.getElementById("name");
+            var name = nameInput.value;
+
+            if (name.trim() === "") {
+                alert("Please enter your name.");
+                return false; // Prevent form submission
+            }
+
+            // Continue with form submission if validation passes
+            return true;
+        }
+    </script>
+</body>
+
+</html>

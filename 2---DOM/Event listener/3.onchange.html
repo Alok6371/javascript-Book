@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onChange Event Listener</title>
+
+</head>
+
+<body>
+    <label for="colorSelect">Select the Color:</label>
+    <select onchange="changecolor()" id="colorSelect" >
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+    <p id="result"> Selected color will be displayed here</p>
+
+
+    <script>
+        function changecolor(){
+            var colorSelect=document.getElementById("colorSelect");
+            var selectedColor=colorSelect.value;
+
+            
+            var resultParagraph = document.getElementById("result");
+            resultParagraph.textContent="You selected:" + selectedColor;
+
+            document.body.style.backgroundColor =selectedColor;
+        }
+    </script>
+</body>
+
+</html>

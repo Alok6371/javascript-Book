@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>omselect Example</title>
+</head>
+
+<body>
+
+    <!-- ///////////////////first Type//////////////// -->
+
+    <input type="text" id="myInput" onselect="onselectFunction()" placeholder="some text here">
+    <script>
+        function onselectFunction() {
+            alert("Text file select");
+        }
+    </script>
+
+    <!-- //////////////Second Type////////////////////// -->
+    
+    <input type="text" id="myInput2" placeholder="Some text here ans select">
+    <script>
+        var inputElement = document.getElementById("myInput2");
+        inputElement.addEventListener("select", function () {
+            alert("Text are  selected!");
+        });
+    </script>
+</body>
+
+</html>
